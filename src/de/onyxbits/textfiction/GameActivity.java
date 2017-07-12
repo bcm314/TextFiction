@@ -32,6 +32,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.animation.AnimationUtils;
+import android.view.Gravity;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.ProgressBar;
@@ -424,8 +425,21 @@ public class GameActivity extends FragmentActivity implements DialogInterface.On
 			else {
 				tmp = "";
 			}
+			
+			String oldText = statusWindow.getText().toString();
+			
 			statusWindow.setText(tmp);
 			retainerFragment.upperWindow = tmp;
+
+			if (!tmp.equals(""))
+				if (!tmp.equals(oldText)) {
+					if ((tmp.indexOf('\n') == -1) && (tmp.indexOf('\r') == -1))
+						tmp=tmp.trim(); // single line
+					Toast toast = Toast.makeText(this, tmp, Toast.LENGTH_LONG);
+				    toast.setGravity(Gravity.TOP, 0, 0);
+				    toast.show();    					
+				}
+		
 		}
 		upper.retrieved();
 
