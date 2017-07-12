@@ -791,4 +791,19 @@ public class GameActivity extends FragmentActivity implements DialogInterface.On
 	public void onOptionsMenuClosed(Menu m) {
 		dimSoftButtonsIfPossible();
 	}
+
+	// http://stackoverflow.com/questions/25831634/android-openoptionsmenu-does-nothing-in-kitkat
+	@Override
+	public void openOptionsMenu() {
+		super.openOptionsMenu();
+		Configuration config = getResources().getConfiguration();
+		if ((config.screenLayout & Configuration.SCREENLAYOUT_SIZE_MASK) > Configuration.SCREENLAYOUT_SIZE_LARGE) {
+			int originalScreenLayout = config.screenLayout;
+			config.screenLayout = Configuration.SCREENLAYOUT_SIZE_LARGE;
+			super.openOptionsMenu();
+			config.screenLayout = originalScreenLayout;
+		} else {
+			super.openOptionsMenu();
+		}
+	}	
 }
