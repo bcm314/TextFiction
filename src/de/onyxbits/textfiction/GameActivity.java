@@ -32,6 +32,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.animation.AnimationUtils;
+import android.view.Gravity;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.ProgressBar;
@@ -49,6 +50,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
+import android.content.res.Configuration;
 import android.graphics.Typeface;
 import android.os.Build;
 import android.preference.PreferenceManager;
@@ -423,8 +425,21 @@ public class GameActivity extends FragmentActivity implements DialogInterface.On
 			else {
 				tmp = "";
 			}
+			
+			String oldText = statusWindow.getText().toString();
+			
 			statusWindow.setText(tmp);
 			retainerFragment.upperWindow = tmp;
+
+			if (!tmp.equals(""))
+				if (!tmp.equals(oldText)) {
+					if ((tmp.indexOf('\n') == -1) && (tmp.indexOf('\r') == -1))
+						tmp=tmp.trim(); // single line
+					Toast toast = Toast.makeText(this, tmp, Toast.LENGTH_LONG);
+				    toast.setGravity(Gravity.TOP, 0, 0);
+				    toast.show();    					
+				}
+		
 		}
 		upper.retrieved();
 
@@ -432,6 +447,18 @@ public class GameActivity extends FragmentActivity implements DialogInterface.On
 		if (lower.cursor > 0) {
 			showLower = true;
 			tmp = new String(lower.frameBuffer, 0, lower.noPrompt());
+			
+			// because we use bubbles, newline at beginning and end are not needed
+			while ((" "+tmp).charAt(tmp.length()) == '\n') {
+				tmp = tmp.substring(0,tmp.length()-1); 		
+			}
+			int CuttedLeft;
+			CuttedLeft=0;
+			while ((tmp+" ").charAt(0) == '\n')	{
+				tmp = tmp.substring(1); 		
+				CuttedLeft++;
+			}
+			
 			if (ttsReady && prefs.getBoolean("narrator", false)) {
 				speaker.speak(tmp, TextToSpeech.QUEUE_FLUSH, null);
 			}
@@ -439,13 +466,18 @@ public class GameActivity extends FragmentActivity implements DialogInterface.On
 			StyleRegion reg = lower.regions;
 			if (reg != null) {
 				while (reg != null) {
+					reg.start=reg.start-CuttedLeft;
+					reg.end=reg.end-CuttedLeft;
+					
 					if (reg.next == null) {
 						// The printer does not "close" the last style since it doesn't know
 						// when the last character is printed.
 						reg.end = tmp.length() - 1;
 					}
 					// Did the game style the prompt (which we cut away)?
-					reg.end = Math.min(reg.end, tmp.length() - 1);
+					//??? reg.end = Math.min(reg.end, tmp.length() - 1);
+					reg.end = Math.min(reg.end, tmp.length());
+					
 					switch (reg.style) {
 						case ZWindow.BOLD: {
 							stmp.setSpan(new StyleSpan(Typeface.BOLD), reg.start, reg.end, 0);
@@ -791,4 +823,19 @@ public class GameActivity extends FragmentActivity implements DialogInterface.On
 	public void onOptionsMenuClosed(Menu m) {
 		dimSoftButtonsIfPossible();
 	}
+
+	// http://stackoverflow.com/questions/25831634/android-openoptionsmenu-does-nothing-in-kitkat
+	@Override
+	public void openOptionsMenu() {
+		super.openOptionsMenu();
+		Configuration config = getResources().getConfiguration();
+		if ((config.screenLayout & Configuration.SCREENLAYOUT_SIZE_MASK) > Configuration.SCREENLAYOUT_SIZE_LARGE) {
+			int originalScreenLayout = config.screenLayout;
+			config.screenLayout = Configuration.SCREENLAYOUT_SIZE_LARGE;
+			super.openOptionsMenu();
+			config.screenLayout = originalScreenLayout;
+		} else {
+			super.openOptionsMenu();
+		}
+	}	
 }

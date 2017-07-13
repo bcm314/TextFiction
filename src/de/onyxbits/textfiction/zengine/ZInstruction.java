@@ -1022,6 +1022,12 @@ public class ZInstruction {
 			if ((ch >= (byte) 'A') && (ch <= (byte) 'Z')) {
 				ch = (byte) (ch - (byte) 'A' + (byte) 'a');
 			}
+			else if (ch == (byte) '\u009e')  // Umlaut 'A'
+				ch = (byte) '\u009b';        // Umlaut 'a'
+			else if (ch == (byte) '\u009f')  // Umlaut 'O'
+				ch = (byte) '\u009c';        // Umlaut 'o'
+			else if (ch == (byte) '\u00a0')  // Umlaut 'U'
+				ch = (byte) '\u009d';        // Umlaut 'u'
 			zm.memory_image[tbuf + bufloc] = ch;
 			bufloc++;
 			tsize--;
