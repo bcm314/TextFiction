@@ -57,9 +57,9 @@
 	</style>
 
 	<style name="atalanta_bubble_right">
-		<item name="android:layout_marginLeft">@dimen/jason.bubble_sidemargin</item>
+		<item name="android:layout_marginRight">@dimen/jason.bubble_sidemargin</item>
 		<item name="android:layout_marginTop">@dimen/jason.bubble_topmargin</item>
-		<item name="android:layout_gravity">right</item>
+		<item name="android:layout_gravity">left</item>
 		<item name="android:textColor">@color/atalanta.bubble_right</item>
 		<item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
 	</style>
