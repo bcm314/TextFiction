@@ -19,7 +19,7 @@
 		android:id="@+id/iconselect"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:numColumns="4" >
+		android:numColumns="6" >
 	</GridView>
 
 	<LinearLayout
