@@ -403,9 +403,22 @@ public abstract class ZMachine {
 		calculate_checksum();
 	}
 
+	public void restart_without_windowchange() {
+		runState = STATE_INIT;
+		restart_state.header.set_transcripting(header.transcripting());
+		restart_state.restore_saved();
+		set_header_flags();
+		pc = header.initial_pc();
+		calculate_checksum();
+	}
+
 	public void restore(ZState zs) {
 		zs.header.set_transcripting(header.transcripting());
-		restart();
+		
+		// restart();
+		restart_without_windowchange(); // BCM: don't make "window[1].resize(0, 0);"
+		//                                 childs ZMachine5 and ZMachine3 do it in restart()
+		
 		zs.restore_saved();
 		// NOTE: the z-machine standard only specifies saving/restoring via
 		// a command. This implies that a commandline was visible when the
