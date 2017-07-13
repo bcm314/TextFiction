@@ -22,8 +22,9 @@ This is fork by me (BCM) from V1.7pre
 
 Changes:
 - Bugfix: menu was not shown (KitKat and Jelly Bean, maybe also others)
-- add space after append-word (to easier continue writing)
+- Bugfix: StatusWindow no longer work after game restore
 - Show StatusWindow changes as toast
+- add space after append-word (to easier continue writing)
 - remove empty lines at top and bottom of bubbles
 - support uppercase German umlaute
 - added more icons
