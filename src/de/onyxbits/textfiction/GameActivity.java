@@ -447,6 +447,18 @@ public class GameActivity extends FragmentActivity implements DialogInterface.On
 		if (lower.cursor > 0) {
 			showLower = true;
 			tmp = new String(lower.frameBuffer, 0, lower.noPrompt());
+			
+			// because we use bubbles, newline at beginning and end are not needed
+			while ((" "+tmp).charAt(tmp.length()) == '\n') {
+				tmp = tmp.substring(0,tmp.length()-1); 		
+			}
+			int CuttedLeft;
+			CuttedLeft=0;
+			while ((tmp+" ").charAt(0) == '\n')	{
+				tmp = tmp.substring(1); 		
+				CuttedLeft++;
+			}
+			
 			if (ttsReady && prefs.getBoolean("narrator", false)) {
 				speaker.speak(tmp, TextToSpeech.QUEUE_FLUSH, null);
 			}
@@ -454,13 +466,18 @@ public class GameActivity extends FragmentActivity implements DialogInterface.On
 			StyleRegion reg = lower.regions;
 			if (reg != null) {
 				while (reg != null) {
+					reg.start=reg.start-CuttedLeft;
+					reg.end=reg.end-CuttedLeft;
+					
 					if (reg.next == null) {
 						// The printer does not "close" the last style since it doesn't know
 						// when the last character is printed.
 						reg.end = tmp.length() - 1;
 					}
 					// Did the game style the prompt (which we cut away)?
-					reg.end = Math.min(reg.end, tmp.length() - 1);
+					//??? reg.end = Math.min(reg.end, tmp.length() - 1);
+					reg.end = Math.min(reg.end, tmp.length());
+					
 					switch (reg.style) {
 						case ZWindow.BOLD: {
 							stmp.setSpan(new StyleSpan(Typeface.BOLD), reg.start, reg.end, 0);
