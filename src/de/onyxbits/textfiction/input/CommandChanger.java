@@ -38,12 +38,12 @@ class CommandChanger implements OnItemClickListener, OnLongClickListener {
 	private TextView cmdLine;
 	private ImageView target;
 	private LinearLayout buttonBar;
-	private File file;
+	private File storyDir;
 
-	public CommandChanger(TextView cmdLine, LinearLayout buttonBar, File file) {
+	public CommandChanger(TextView cmdLine, LinearLayout buttonBar, File storyDir) {
 		this.cmdLine = cmdLine;
 		this.buttonBar = buttonBar;
-		this.file=file;
+		this.storyDir=storyDir;
 	}
 
 	@Override
@@ -59,7 +59,8 @@ class CommandChanger implements OnItemClickListener, OnLongClickListener {
 			for (int i = 0; i < buttonBar.getChildCount(); i++) {
 				array.put(CmdIcon.toJSON((CmdIcon)buttonBar.getChildAt(i).getTag()));
 			}
-			PrintWriter pw = new PrintWriter(file);
+			PrintWriter pw = new PrintWriter(new File(storyDir, "quickcommands" + (String)buttonBar.getTag() + ".json"));
+			
 			pw.write(array.toString(2));
 			pw.close();
 		}
