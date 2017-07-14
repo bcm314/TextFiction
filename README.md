@@ -24,7 +24,7 @@ Changes:
 - Bugfix: menu was not shown (KitKat and Jelly Bean, maybe also others)
 - Bugfix: StatusWindow no longer work after game restore
 - Show StatusWindow changes as toast
-- add space after append-word (to easier continue writing)
+- trim+add space after append-word and remove-word
 - remove empty lines at top and bottom of bubbles
 - support uppercase German umlaute
 - added more icons
