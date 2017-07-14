@@ -48,13 +48,13 @@
 
 	<string name="defaultcommands">[
   {
-    "imgid": 0,
-    "cmd": "Look",
-    "atonce": true
+    "imgid": 42,
+    "cmd": "Go",
+    "atonce": false
   },
   {
-    "imgid": 1,
-    "cmd": "Examine",
+    "imgid": 0,
+    "cmd": "Look",
     "atonce": false
   },
   {
@@ -82,7 +82,7 @@
     "cmd": "Pull",
     "atonce": false
   },
-    {
+  {
     "imgid": 14,
     "cmd": "Push",
     "atonce": false
@@ -102,12 +102,204 @@
     "cmd": "Give",
     "atonce": false
   },
-    {
+  {
     "imgid": 11,
     "cmd": "Wait",
     "atonce": true
   }
-
+  
 ]</string>
 
+	<string name="defaultcommands_0">[
+  {
+    "imgid": 32,
+    "cmd": "north",
+    "atonce": true
+  },
+  {
+    "imgid": 33,
+    "cmd": "south",
+    "atonce": true
+  },
+  {
+    "imgid": 34,
+    "cmd": "west",
+    "atonce": true
+  },
+  {
+    "imgid": 35,
+    "cmd": "east",
+    "atonce": true
+  },
+  {
+    "imgid": 36,
+    "cmd": "northwest",
+    "atonce": true
+  },
+  {
+    "imgid": 37,
+    "cmd": "northeast",
+    "atonce": true
+  },
+  {
+    "imgid": 38,
+    "cmd": "southwest",
+    "atonce": true
+  },
+  {
+    "imgid": 39,
+    "cmd": "southeast",
+    "atonce": true
+  },
+  {
+    "imgid": 40,
+    "cmd": "up",
+    "atonce": true
+  },
+  {
+    "imgid": 41,
+    "cmd": "down",
+    "atonce": true
+  },
+  {
+    "imgid": -2,
+    "cmd": \" \",
+    "atonce": false
+  },
+  {
+    "imgid": -2,
+    "cmd": \" \",
+    "atonce": false
+  }
+
+]</string>		
+	
+	<string name="defaultcommands_1">[
+  {
+    "imgid": 0,
+    "cmd": \" \",
+    "atonce": true
+  },
+  {
+    "imgid": 1,
+    "cmd": \"^Examine\",
+    "atonce": false
+  },
+ {
+    "imgid": 40,
+    "cmd": \"at\",
+    "atonce": false
+  },
+  {
+    "imgid": 41,
+    "cmd": \"under\",
+    "atonce": false
+  },
+  {
+    "imgid": 14,
+    "cmd": \"in\",
+    "atonce": false
+  },
+  {
+    "imgid": 15,
+    "cmd": \"out\",
+    "atonce": false
+  },
+  {
+    "imgid": 23,
+    "cmd": \"through\",
+    "atonce": false
+  },
+  {
+    "imgid": 32,
+    "cmd": \"north\",
+    "atonce": true
+  },
+  {
+    "imgid": 33,
+    "cmd": \"south\",
+    "atonce": true
+  },
+  {
+    "imgid": 34,
+    "cmd": \"west\",
+    "atonce": true
+  },
+  {
+    "imgid": 35,
+    "cmd": \"east\",
+    "atonce": true
+  },
+  {
+    "imgid": -2,
+    "cmd": \" \",
+    "atonce": false
+  }
+
+]</string>		
+	
+	<string name="emptycommands">[
+  {
+    "imgid": 43,
+    "cmd": \" \",
+    "atonce": false
+  },
+  {
+    "imgid": 43,
+    "cmd": \" \",
+    "atonce": false
+  },
+  {
+    "imgid": 43,
+    "cmd": \" \",
+    "atonce": false
+  },
+  {
+    "imgid": 43,
+    "cmd": \" \",
+    "atonce": false
+  },
+  {
+    "imgid": 43,
+    "cmd": \" \",
+    "atonce": false
+  },
+  {
+    "imgid": 43,
+    "cmd": \" \",
+    "atonce": false
+  },
+  {
+    "imgid": 43,
+    "cmd": \" \",
+    "atonce": false
+  },
+  {
+    "imgid": 43,
+    "cmd": \" \",
+    "atonce": false
+  },
+  {
+    "imgid": 43,
+    "cmd": \" \",
+    "atonce": false
+  },
+  {
+    "imgid": 43,
+    "cmd": \" \",
+    "atonce": false
+  },
+  {
+    "imgid": 43,
+    "cmd": \" \",
+    "atonce": false
+  },
+  {
+    "imgid": 43,
+    "cmd": \" \",
+    "atonce": false
+  }
+
+]</string>		
+		
 </resources>
