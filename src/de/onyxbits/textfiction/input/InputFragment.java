@@ -1,6 +1,7 @@
 package de.onyxbits.textfiction.input;
 
 import java.io.File;
+import java.io.PrintWriter;
 
 import org.json.JSONArray;
 
@@ -23,6 +24,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.TextView.OnEditorActionListener;
 import android.widget.ViewFlipper;
+import android.widget.Toast; // ###BCM-Debug###
 
 /**
  * UI interface between the player and the engine's input buffer.
@@ -70,6 +72,7 @@ public class InputFragment extends Fragment implements OnClickListener,
 		flipper = (ViewFlipper) inflater.inflate(R.layout.fragment_input,
 				container, false);
 		buttonBar = (LinearLayout) flipper.findViewById(R.id.quickcmdcontainer);
+		buttonBar.setTag("");
 		cmdLine = (EditText) flipper.findViewById(R.id.userinput);
 		submit = (ImageButton) flipper.findViewById(R.id.submit);
 		expand = (ImageButton) flipper.findViewById(R.id.expand);
@@ -91,12 +94,16 @@ public class InputFragment extends Fragment implements OnClickListener,
 
 		((KeyboardButton) flipper.findViewById(R.id.keyboard))
 				.setInputProcessor(inputProcessor);
-
+		
+//		File commands = new File(FileUtil.getDataDir(inputProcessor.getStory()),
+//				CMDFILE);
 		File commands = new File(FileUtil.getDataDir(inputProcessor.getStory()),
-				CMDFILE);
+				"quickcommands" + (String)buttonBar.getTag() + ".json");
 
 		Context ctx = getActivity();
-		CommandChanger changer = new CommandChanger(cmdLine, buttonBar, commands);
+//		CommandChanger changer = new CommandChanger(cmdLine, buttonBar, commands);
+		CommandChanger changer = new CommandChanger(cmdLine, buttonBar, 
+				FileUtil.getDataDir(inputProcessor.getStory()));
 
 		try {
 			String buttonDef = getActivity().getString(R.string.defaultcommands);
@@ -195,6 +202,8 @@ public class InputFragment extends Fragment implements OnClickListener,
 
 		if (v.getTag() instanceof CmdIcon) {
 			CmdIcon ci = (CmdIcon) v.getTag();
+			
+			/*
 			if (ci.atOnce) {
 				inputProcessor.executeCommand((ci.cmd + "\n").toCharArray());
 			}
@@ -214,6 +223,71 @@ public class InputFragment extends Fragment implements OnClickListener,
 					executeCommand();
 				}
 			}
+			 */
+			
+			
+			
+			// ### will redo this part ...
+
+			// short-click on "unconfigured" button will be ignored
+			if (ci.imgid < 0)
+				return;
+			if ((CmdIcon.ICONS[ci.imgid] == R.drawable.ic_action_space) ||
+				(CmdIcon.ICONS[ci.imgid] == R.drawable.ic_action_empty))
+				return;
+			
+			String tmp;
+			String tmpNew;
+			boolean atOnce;
+			
+			tmpNew=ci.cmd.trim() + " ";
+			atOnce=ci.atOnce;
+			if (tmpNew!=tmpNew.replace("$", "")) {
+				atOnce=true;
+				tmpNew=tmpNew.replace("$", "");
+			}
+			if (tmpNew.charAt(0)=='^') {
+				tmp = "";
+				tmpNew=tmpNew.substring(1).trim();
+			}
+			else {
+				tmp = cmdLine.getEditableText().toString().trim();
+				tmpNew=tmpNew.trim();
+			}
+			
+			if (hasVerb == false)
+				tmpNew=tmpNew + " " + tmp;
+			else
+				tmpNew=tmp.trim() + " " + tmpNew;
+			
+			tmpNew=tmpNew.trim();
+			if (!tmpNew.equals(""))
+				tmpNew=tmpNew+" ";
+			
+			cmdLine.setText(tmpNew);
+			cmdLine.setSelection(cmdLine.getEditableText().toString().length());	
+			
+			if (atOnce)
+				tmp="do";
+			else if (hasVerb || (ci.cmd.trim().equals("")))
+				tmp=""; 
+			
+			if (!ci.cmd.trim().equals(""))
+				hasVerb = true;
+			
+		
+			
+			for (int i = 0 ; i < buttonBar.getChildCount() ; i++) {
+				if (ci == (buttonBar.getChildAt(i).getTag())) {
+					UpdateCmdButtons(i);
+					break;
+				}
+			}				
+				
+			if (tmp.length() > 0) {
+				executeCommand();
+			}	
+			
 		}
 	}
 
@@ -261,6 +335,8 @@ public class InputFragment extends Fragment implements OnClickListener,
 		else {
 			reset();
 		}
+		
+		UpdateCmdButtons(-1);
 	}
 
 	@Override
@@ -270,8 +346,77 @@ public class InputFragment extends Fragment implements OnClickListener,
 	}
 
 	private void executeCommand() {
+
+		// Restore top-level-buttons		
+		UpdateCmdButtons(-2);	
+		
 		inputProcessor.executeCommand((cmdLine.getText().toString() + "\n")
 				.toCharArray());
 	}
 
+	private void UpdateCmdButtons(int buttonNr) {
+		String menuPath;
+		File commands;
+		String buttonDef;
+		
+		menuPath = (String)buttonBar.getTag();
+		if (buttonNr >= 0)
+			menuPath = menuPath + "_" + buttonNr;
+		else if (buttonNr == -1)
+		{
+			int idx = menuPath.lastIndexOf('_');
+			if (idx > 0) {
+				menuPath = menuPath.substring(0, idx-1);
+			}
+		}
+		else
+			menuPath = "";
+
+		buttonBar.setTag(menuPath);
+
+//		Toast.makeText(getActivity(),"menuPath=" + menuPath, Toast.LENGTH_LONG).show(); // ###BCM-Debug###
+		
+		commands = new File(FileUtil.getDataDir(inputProcessor.getStory()),
+				"quickcommands" + (String)buttonBar.getTag() + ".json");
+
+		try {
+			if (menuPath.equals(""))
+				buttonDef = getActivity().getString(R.string.defaultcommands);
+			else if (menuPath.equals("_0"))
+				buttonDef = getActivity().getString(R.string.defaultcommands_0);
+			else if (menuPath.equals("_1"))
+				buttonDef = getActivity().getString(R.string.defaultcommands_1);
+			else
+				buttonDef = getActivity().getString(R.string.emptycommands);
+			
+			JSONArray buttons = new JSONArray(buttonDef);
+			if (commands.exists()) {
+				buttonDef = FileUtil.getContents(commands);
+				buttons = new JSONArray(buttonDef);
+			}
+			for (int i = 0; i < buttons.length(); i++) {
+				ImageButton b = (ImageButton)buttonBar.getChildAt(i);			
+				CmdIcon icoButton = (CmdIcon)b.getTag();
+
+				CmdIcon icoFile = CmdIcon.fromJSON(buttons.getJSONObject(i));
+
+				icoButton.imgid=icoFile.imgid;
+				icoButton.cmd=icoFile.cmd;
+				icoButton.atOnce=icoFile.atOnce;
+				
+				if (icoButton.imgid >= 0)
+					b.setImageResource(CmdIcon.ICONS[icoButton.imgid]);
+				else if (icoButton.imgid == -2)
+					b.setImageResource(R.drawable.ic_action_empty);
+				else
+					b.setImageResource(android.R.color.transparent);
+				
+				b.setContentDescription(icoButton.cmd);
+			}
+		}
+		catch (Exception e) {
+			Log.w(getClass().getName(), e);
+		}
+		
+	}
 }
