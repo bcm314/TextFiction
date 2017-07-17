@@ -416,7 +416,42 @@ public class InputFragment extends Fragment implements OnClickListener,
 		}
 		catch (Exception e) {
 			Log.w(getClass().getName(), e);
-		}
-		
+		}	
 	}
+	
+	private void WriteSetting(int resId, String FileName) {
+		File StoryFile;
+		
+		StoryFile=FileUtil.getDataDir(inputProcessor.getStory());
+
+		try {
+			String buttonDef = getActivity().getString(resId);		
+			JSONArray array = new JSONArray(buttonDef);
+			PrintWriter pw = new PrintWriter(new File(StoryFile, FileName));
+			pw.write(array.toString(2));
+			pw.close();
+		}
+		catch (Exception e) {
+			Log.w(getClass().getName(), e);
+		}
+	}
+	
+	public void WriteStoryLangueSettings(String lang) {
+		
+		if (lang.equals("en")) {
+			WriteSetting(R.string.defaultcommands, "quickcommands.json");
+			WriteSetting(R.string.defaultcommands_0, "quickcommands_0.json");
+			WriteSetting(R.string.defaultcommands_1, "quickcommands_1.json");
+		} else if (lang.equals("de")) { 
+			WriteSetting(R.string.defaultcommands_de, "quickcommands.json");
+			WriteSetting(R.string.defaultcommands_de_0, "quickcommands_0.json");
+			WriteSetting(R.string.defaultcommands_de_1, "quickcommands_1.json");
+		}
+		else
+			return;
+		
+		UpdateCmdButtons(-2);
+		
+		Toast.makeText(getActivity(),"Language Defaults written", Toast.LENGTH_LONG).show(); // ###BCM-Debug###
+	}	
 }
