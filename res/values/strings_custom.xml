@@ -77,7 +77,7 @@
     "cmd": "Inventory",
     "atonce": true
   },
-    {
+  {
     "imgid": 15,
     "cmd": "Pull",
     "atonce": false
@@ -163,12 +163,12 @@
   },
   {
     "imgid": -2,
-    "cmd": \" \",
+    "cmd": \"\",
     "atonce": false
   },
   {
     "imgid": -2,
-    "cmd": \" \",
+    "cmd": \"\",
     "atonce": false
   }
 
@@ -177,7 +177,7 @@
 	<string name="defaultcommands_1">[
   {
     "imgid": 0,
-    "cmd": \" \",
+    "cmd": \"\",
     "atonce": true
   },
   {
@@ -232,71 +232,263 @@
   },
   {
     "imgid": -2,
-    "cmd": \" \",
+    "cmd": \"\",
+    "atonce": false
+  }
+
+]</string>		
+
+	<string name="defaultcommands_de">[
+  {
+    "imgid": 42,
+    "cmd": "Geh",
+    "atonce": false
+  },
+  {
+    "imgid": 0,
+    "cmd": "Schau",
+    "atonce": false
+  },
+  {
+    "imgid": 8,
+    "cmd": "Nimm",
+    "atonce": false
+  },
+  {
+    "imgid": 5,
+    "cmd": "Öffne",
+    "atonce": false
+  },
+  {
+    "imgid": 6,
+    "cmd": "Schließe",
+    "atonce": false
+  },
+  {
+    "imgid": 7,
+    "cmd": "Inventar",
+    "atonce": true
+  },
+  {
+    "imgid": 15,
+    "cmd": "Zieh",
+    "atonce": false
+  },
+  {
+    "imgid": 14,
+    "cmd": "Schieb",
+    "atonce": false
+  },
+  {
+    "imgid": 2,
+    "cmd": "Lies",
+    "atonce": false
+  },
+  {
+    "imgid": 24,
+    "cmd": "Leg",
+    "atonce": false
+  },
+  {
+    "imgid": 22,
+    "cmd": "Gebe",
+    "atonce": false
+  },
+  {
+    "imgid": 11,
+    "cmd": "Warte",
+    "atonce": false
+  }
+  
+]</string>
+
+	<string name="defaultcommands_de_0">[
+  {
+    "imgid": 32,
+    "cmd": \"nach Norden.\",
+    "atonce": true
+  },
+  {
+    "imgid": 33,
+    "cmd": \"nach Süden.\",
+    "atonce": true
+  },
+  {
+    "imgid": 34,
+    "cmd": \"nach Westen.\",
+    "atonce": true
+  },
+  {
+    "imgid": 35,
+    "cmd": \"nach Osten.\",
+    "atonce": true
+  },
+  {
+    "imgid": 36,
+    "cmd": \"nach Nordwesten.\",
+    "atonce": true
+  },
+  {
+    "imgid": 37,
+    "cmd": \"nach Nordosten.\",
+    "atonce": true
+  },
+  {
+    "imgid": 38,
+    "cmd": \"nach Südwesten.\",
+    "atonce": true
+  },
+  {
+    "imgid": 39,
+    "cmd": \"nach Südosten.\",
+    "atonce": true
+  },
+  {
+    "imgid": 40,
+    "cmd": \"nach oben.\",
+    "atonce": true
+  },
+  {
+    "imgid": 41,
+    "cmd": \"nach unten.\",
+    "atonce": true
+  },
+  {
+    "imgid": -2,
+    "cmd": \"\",
+    "atonce": false
+  },
+  {
+    "imgid": -2,
+    "cmd": \"\",
     "atonce": false
   }
 
 ]</string>		
 	
-	<string name="emptycommands">[
+	<string name="defaultcommands_de_1">[
+  {
+    "imgid": 0,
+    "cmd": \"\",
+    "atonce": true
+  },
+ {
+    "imgid": 1,
+    "cmd": "^Untersuch",
+    "atonce": false
+  },
+ {
+    "imgid": 40,
+    "cmd": "auf",
+    "atonce": false
+  },
+  {
+    "imgid": 41,
+    "cmd": "unter",
+    "atonce": false
+  },
+  {
+    "imgid": 14,
+    "cmd": "in",
+    "atonce": false
+  },
+  {
+    "imgid": 15,
+    "cmd": "aus",
+    "atonce": false
+  },
+  {
+    "imgid": 23,
+    "cmd": "durch",
+    "atonce": false
+  },
+  {
+    "imgid": 32,
+    "cmd": \"nach Norden.\",
+    "atonce": true
+  },
+  {
+    "imgid": 33,
+    "cmd": \"nach Süden.\",
+    "atonce": true
+  },
+  {
+    "imgid": 34,
+    "cmd": \"nach Westen.\",
+    "atonce": true
+  },
+  {
+    "imgid": 35,
+    "cmd": \"nach Osten.\",
+    "atonce": true
+  },
+  {
+    "imgid": -2,
+    "cmd": \"\",
+    "atonce": false
+  }
+
+]</string>		
+	
+		<string name="emptycommands">[
   {
     "imgid": 43,
-    "cmd": \" \",
+    "cmd": \"\",
     "atonce": false
   },
   {
     "imgid": 43,
-    "cmd": \" \",
+    "cmd": \"\",
     "atonce": false
   },
   {
     "imgid": 43,
-    "cmd": \" \",
+    "cmd": \"\",
     "atonce": false
   },
   {
     "imgid": 43,
-    "cmd": \" \",
+    "cmd": \"\",
     "atonce": false
   },
   {
     "imgid": 43,
-    "cmd": \" \",
+    "cmd": \"\",
     "atonce": false
   },
   {
     "imgid": 43,
-    "cmd": \" \",
+    "cmd": \"\",
     "atonce": false
   },
   {
     "imgid": 43,
-    "cmd": \" \",
+    "cmd": \"\",
     "atonce": false
   },
   {
     "imgid": 43,
-    "cmd": \" \",
+    "cmd": \"\",
     "atonce": false
   },
   {
     "imgid": 43,
-    "cmd": \" \",
+    "cmd": \"\",
     "atonce": false
   },
   {
     "imgid": 43,
-    "cmd": \" \",
+    "cmd": \"\",
     "atonce": false
   },
   {
     "imgid": 43,
-    "cmd": \" \",
+    "cmd": \"\",
     "atonce": false
   },
   {
     "imgid": 43,
-    "cmd": \" \",
+    "cmd": \"\",
     "atonce": false
   }
 
