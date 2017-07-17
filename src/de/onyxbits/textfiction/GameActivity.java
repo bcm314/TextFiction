@@ -342,6 +342,10 @@ public class GameActivity extends FragmentActivity implements DialogInterface.On
 				messages.notifyDataSetChanged();
 				return true;
 			}
+			case R.id.mi_WriteStoryLanguageFiles: {
+				inputFragment.WriteStoryLangueSettings("de"); // ### BCM ### ToDo select language
+				return true;
+			}
 			case R.id.mi_help: {
 				MainActivity.openUri(this, Uri.parse(getString(R.string.url_help)));
 				return true;
