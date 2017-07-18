@@ -386,6 +386,10 @@ public class InputFragment extends Fragment implements OnClickListener,
 				buttonDef = getActivity().getString(R.string.defaultcommands_0);
 			else if (menuPath.equals("_1"))
 				buttonDef = getActivity().getString(R.string.defaultcommands_1);
+			else if (menuPath.equals("_2"))
+				buttonDef = getActivity().getString(R.string.defaultcommands_2);
+			else if (menuPath.equals("_10"))
+				buttonDef = getActivity().getString(R.string.defaultcommands_10);
 			else
 				buttonDef = getActivity().getString(R.string.emptycommands);
 			
@@ -442,16 +446,20 @@ public class InputFragment extends Fragment implements OnClickListener,
 			WriteSetting(R.string.defaultcommands, "quickcommands.json");
 			WriteSetting(R.string.defaultcommands_0, "quickcommands_0.json");
 			WriteSetting(R.string.defaultcommands_1, "quickcommands_1.json");
+			WriteSetting(R.string.defaultcommands_2, "quickcommands_2.json");
+			WriteSetting(R.string.defaultcommands_10, "quickcommands_10.json");
 		} else if (lang.equals("de")) { 
 			WriteSetting(R.string.defaultcommands_de, "quickcommands.json");
 			WriteSetting(R.string.defaultcommands_de_0, "quickcommands_0.json");
 			WriteSetting(R.string.defaultcommands_de_1, "quickcommands_1.json");
+			WriteSetting(R.string.defaultcommands_de_2, "quickcommands_2.json");
+			WriteSetting(R.string.defaultcommands_de_10, "quickcommands_10.json");
 		}
 		else
 			return;
 		
 		UpdateCmdButtons(-2);
 		
-		Toast.makeText(getActivity(),"Language Defaults written", Toast.LENGTH_LONG).show(); // ###BCM-Debug###
+		Toast.makeText(getActivity(),"Language Defaults for " + lang + " written", Toast.LENGTH_LONG).show(); // ###BCM-Debug###
 	}	
 }
