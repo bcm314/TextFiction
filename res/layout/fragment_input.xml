@@ -7,21 +7,30 @@
 		android:id="@+id/inputcontainer"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content" >
-	    
-		<HorizontalScrollView
-			android:id="@+id/horizontalScrollView1"
+
+		<RelativeLayout
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_below="@+id/userinput"
-			android:layout_centerInParent="true" >
+			android:layout_alignRight="@+id/submit"
+			android:layout_alignLeft="@+id/expand"
+			android:paddingLeft="2dp"
+			android:paddingRight="2dp" >
 
-			<LinearLayout
-				android:id="@+id/quickcmdcontainer"
+			<HorizontalScrollView
+				android:id="@+id/horizontalScrollView1"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:orientation="horizontal" >
-			</LinearLayout>
-		</HorizontalScrollView>
+				android:layout_centerInParent="true" >
+
+				<LinearLayout
+					android:id="@+id/quickcmdcontainer"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal" >
+				</LinearLayout>
+			</HorizontalScrollView>
+		</RelativeLayout>
 
 		<EditText
 			android:id="@+id/userinput"
