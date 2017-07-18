@@ -162,12 +162,12 @@
     "atonce": true
   },
   {
-    "imgid": -2,
+    "imgid": 43,
     "cmd": \"\",
     "atonce": false
   },
   {
-    "imgid": -2,
+    "imgid": 43,
     "cmd": \"\",
     "atonce": false
   }
@@ -231,13 +231,141 @@
     "atonce": true
   },
   {
-    "imgid": -2,
+    "imgid": 43,
     "cmd": \"\",
     "atonce": false
   }
 
 ]</string>		
 
+		<string name="defaultcommands_2">[
+  {
+    "imgid": 10,
+    "cmd": \"all\",
+    "atonce": true
+  },
+  {
+    "imgid": 43,
+    "cmd": \"\",
+    "atonce": false
+  },
+  {
+    "imgid": 43,
+    "cmd": \"\",
+    "atonce": false
+  },
+  {
+    "imgid": 43,
+    "cmd": \"\",
+    "atonce": false
+  },
+  {
+    "imgid": 43,
+    "cmd": \"\",
+    "atonce": false
+  },
+  {
+    "imgid": 43,
+    "cmd": \"\",
+    "atonce": false
+  },
+  {
+    "imgid": 43,
+    "cmd": \"\",
+    "atonce": false
+  },
+  {
+    "imgid": 43,
+    "cmd": \"\",
+    "atonce": false
+  },
+  {
+    "imgid": 43,
+    "cmd": \"\",
+    "atonce": false
+  },
+  {
+    "imgid": 43,
+    "cmd": \"\",
+    "atonce": false
+  },
+  {
+    "imgid": 43,
+    "cmd": \"\",
+    "atonce": false
+  },
+  {
+    "imgid": 43,
+    "cmd": \"\",
+    "atonce": false
+  }
+
+]</string>		
+
+		<string name="defaultcommands_10">[
+  {
+    "imgid": 10,
+    "cmd": \"all\",
+    "atonce": false
+  },
+  {
+    "imgid": 43,
+    "cmd": \"\",
+    "atonce": false
+  },
+  {
+    "imgid": 43,
+    "cmd": \"\",
+    "atonce": false
+  },
+  {
+    "imgid": 43,
+    "cmd": \"\",
+    "atonce": false
+  },
+  {
+    "imgid": 43,
+    "cmd": \"\",
+    "atonce": false
+  },
+  {
+    "imgid": 43,
+    "cmd": \"\",
+    "atonce": false
+  },
+  {
+    "imgid": 43,
+    "cmd": \"\",
+    "atonce": false
+  },
+  {
+    "imgid": 43,
+    "cmd": \"\",
+    "atonce": false
+  },
+  {
+    "imgid": 43,
+    "cmd": \"\",
+    "atonce": false
+  },
+  {
+    "imgid": 43,
+    "cmd": \"\",
+    "atonce": false
+  },
+  {
+    "imgid": 43,
+    "cmd": \"\",
+    "atonce": false
+  },
+  {
+    "imgid": 43,
+    "cmd": \"\",
+    "atonce": false
+  }
+
+]</string>		
+				
 	<string name="defaultcommands_de">[
   {
     "imgid": 42,
@@ -354,12 +482,12 @@
     "atonce": true
   },
   {
-    "imgid": -2,
+    "imgid": 43,
     "cmd": \"\",
     "atonce": false
   },
   {
-    "imgid": -2,
+    "imgid": 43,
     "cmd": \"\",
     "atonce": false
   }
@@ -423,13 +551,141 @@
     "atonce": true
   },
   {
-    "imgid": -2,
+    "imgid": 43,
     "cmd": \"\",
     "atonce": false
   }
 
 ]</string>		
-	
+
+		<string name="defaultcommands_de_2">[
+  {
+    "imgid": 10,
+    "cmd": \"alles\",
+    "atonce": true
+  },
+  {
+    "imgid": 43,
+    "cmd": \"\",
+    "atonce": false
+  },
+  {
+    "imgid": 43,
+    "cmd": \"\",
+    "atonce": false
+  },
+  {
+    "imgid": 43,
+    "cmd": \"\",
+    "atonce": false
+  },
+  {
+    "imgid": 43,
+    "cmd": \"\",
+    "atonce": false
+  },
+  {
+    "imgid": 43,
+    "cmd": \"\",
+    "atonce": false
+  },
+  {
+    "imgid": 43,
+    "cmd": \"\",
+    "atonce": false
+  },
+  {
+    "imgid": 43,
+    "cmd": \"\",
+    "atonce": false
+  },
+  {
+    "imgid": 43,
+    "cmd": \"\",
+    "atonce": false
+  },
+  {
+    "imgid": 43,
+    "cmd": \"\",
+    "atonce": false
+  },
+  {
+    "imgid": 43,
+    "cmd": \"\",
+    "atonce": false
+  },
+  {
+    "imgid": 43,
+    "cmd": \"\",
+    "atonce": false
+  }
+
+]</string>		
+
+		<string name="defaultcommands_de_10">[
+  {
+    "imgid": 10,
+    "cmd": \"alles\",
+    "atonce": false
+  },
+  {
+    "imgid": 43,
+    "cmd": \"\",
+    "atonce": false
+  },
+  {
+    "imgid": 43,
+    "cmd": \"\",
+    "atonce": false
+  },
+  {
+    "imgid": 43,
+    "cmd": \"\",
+    "atonce": false
+  },
+  {
+    "imgid": 43,
+    "cmd": \"\",
+    "atonce": false
+  },
+  {
+    "imgid": 43,
+    "cmd": \"\",
+    "atonce": false
+  },
+  {
+    "imgid": 43,
+    "cmd": \"\",
+    "atonce": false
+  },
+  {
+    "imgid": 43,
+    "cmd": \"\",
+    "atonce": false
+  },
+  {
+    "imgid": 43,
+    "cmd": \"\",
+    "atonce": false
+  },
+  {
+    "imgid": 43,
+    "cmd": \"\",
+    "atonce": false
+  },
+  {
+    "imgid": 43,
+    "cmd": \"\",
+    "atonce": false
+  },
+  {
+    "imgid": 43,
+    "cmd": \"\",
+    "atonce": false
+  }
+
+]</string>		
+		
 		<string name="emptycommands">[
   {
     "imgid": 43,
