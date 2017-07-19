@@ -21,16 +21,15 @@ https://play.google.com/store/apps/details?id=de.onyxbits.textfiction
 This is fork by me (BCM) from V1.7pre
 
 Changes:
-- Bugfix: menu was not shown (KitKat and Jelly Bean, maybe also others)
-- Bugfix: StatusWindow no longer work after game restore
-- Show StatusWindow changes as toast
+- bugfix: menu was not shown (KitKat and Jelly Bean, maybe also others)
+- bugfix: StatusWindow no longer work after game restore
+- show StatusWindow changes as toast
 - trim+add space after append-word and remove-word
 - remove empty lines at top and bottom of bubbles
 - support uppercase German umlaute
 - added more icons
-- Changed design
+- added Sub-Buttoncmds (even multistep)
+- implemented storylanguage autodetection
+- changed design
 . moved bubbles (but done for all themes) closer to the border
 . Jason and Atalanta: move "right_bubble" to left side
-
-ToDo:
-- Sub-Buttoncmds
