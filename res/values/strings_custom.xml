@@ -28,7 +28,18 @@
 		<item>northwest</item>
 	</string-array>
 
-	<!--
+	<string-array name="initial_highlights_de">
+		<item>norden</item>
+		<item>nordosten</item>
+		<item>osten</item>
+		<item>südosten</item>
+		<item>süden</item>
+		<item>südwesten</item>
+		<item>westen</item>
+		<item>nordwesten</item>
+	</string-array>
+
+		<!--
     Default values for the compass buttons, starting top/center, going 
 	clockwise, exactly eight items required.
 	-->
