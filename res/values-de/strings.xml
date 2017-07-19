@@ -68,5 +68,6 @@
 	<string name="storylang_written">Benutze %1$s Story-Einstellungen.</string>
 	<string name="storylang_en">englische</string>
 	<string name="storylang_de">deutsche</string>
-			
+	<string name="storylang_es">spanische</string>
+				
 </resources>
