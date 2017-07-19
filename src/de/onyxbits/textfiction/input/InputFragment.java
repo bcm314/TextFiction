@@ -354,7 +354,7 @@ public class InputFragment extends Fragment implements OnClickListener,
 				.toCharArray());
 	}
 
-	private void UpdateCmdButtons(int buttonNr) {
+	public void UpdateCmdButtons(int buttonNr) {
 		String menuPath;
 		File commands;
 		String buttonDef;
@@ -422,44 +422,4 @@ public class InputFragment extends Fragment implements OnClickListener,
 			Log.w(getClass().getName(), e);
 		}	
 	}
-	
-	private void WriteSetting(int resId, String FileName) {
-		File StoryFile;
-		
-		StoryFile=FileUtil.getDataDir(inputProcessor.getStory());
-
-		try {
-			String buttonDef = getActivity().getString(resId);		
-			JSONArray array = new JSONArray(buttonDef);
-			PrintWriter pw = new PrintWriter(new File(StoryFile, FileName));
-			pw.write(array.toString(2));
-			pw.close();
-		}
-		catch (Exception e) {
-			Log.w(getClass().getName(), e);
-		}
-	}
-	
-	public void WriteStoryLangueSettings(String lang) {
-		
-		if (lang.equals("en")) {
-			WriteSetting(R.string.defaultcommands, "quickcommands.json");
-			WriteSetting(R.string.defaultcommands_0, "quickcommands_0.json");
-			WriteSetting(R.string.defaultcommands_1, "quickcommands_1.json");
-			WriteSetting(R.string.defaultcommands_2, "quickcommands_2.json");
-			WriteSetting(R.string.defaultcommands_10, "quickcommands_10.json");
-		} else if (lang.equals("de")) { 
-			WriteSetting(R.string.defaultcommands_de, "quickcommands.json");
-			WriteSetting(R.string.defaultcommands_de_0, "quickcommands_0.json");
-			WriteSetting(R.string.defaultcommands_de_1, "quickcommands_1.json");
-			WriteSetting(R.string.defaultcommands_de_2, "quickcommands_2.json");
-			WriteSetting(R.string.defaultcommands_de_10, "quickcommands_10.json");
-		}
-		else
-			return;
-		
-		UpdateCmdButtons(-2);
-		
-		Toast.makeText(getActivity(),"Language Defaults for " + lang + " written", Toast.LENGTH_LONG).show(); // ###BCM-Debug###
-	}	
 }
