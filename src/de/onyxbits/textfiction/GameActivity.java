@@ -923,27 +923,8 @@ public class GameActivity extends FragmentActivity implements DialogInterface.On
 		
 		inputFragment.UpdateCmdButtons(-2);
 
-		txt = getString(R.string.storylang_written);
-		txt = txt.replaceFirst("LANG", langTxt);
+		txt = getString(R.string.storylang_written, langTxt);
 		Toast.makeText(this, txt, Toast.LENGTH_LONG).show();
-		
-		
-		
-		// Load the highlight file
-		try {
-			File file = new File(FileUtil.getDataDir(storyFile), HIGHLIGHTFILE);
-			JSONArray js = new JSONArray(FileUtil.getContents(file));
-			for (int i = 0; i < js.length(); i++) {
-				retainerFragment.highlighted.add(js.getString(i));
-			}
-		}
-		catch (Exception e) {
-			// No big deal. Probably the first time this game runs -> use defaults
-			String[] ini = getResources().getStringArray(R.array.initial_highlights);
-			for (String i : ini) {
-				retainerFragment.highlighted.add(i);
-			}
-		}
 		
 		retainerFragment.highlighted.clear();
 		String[] ini = getResources().getStringArray(R.array.initial_highlights_de);
