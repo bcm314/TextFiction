@@ -150,8 +150,9 @@ public class GameActivity extends FragmentActivity implements DialogInterface.On
 	class storyLanguageClass
 	{
 	    public int count; 
-	    public int de; 
 	    public int en;  
+	    public int de; 
+	    public int es;  
 	};
 	storyLanguageClass storyLanguageData;
 	
@@ -169,8 +170,9 @@ public class GameActivity extends FragmentActivity implements DialogInterface.On
 		storyLanguage="en";
 		storyLanguageData = new storyLanguageClass ();
 		storyLanguageData.count = 0;
-		storyLanguageData.de = 0;
 		storyLanguageData.en = 0;
+		storyLanguageData.de = 0;
+		storyLanguageData.es = 0;
 
 		prefs = PreferenceManager.getDefaultSharedPreferences(this);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -894,7 +896,8 @@ public class GameActivity extends FragmentActivity implements DialogInterface.On
 	
 	public void WriteStoryLangueSettings(String lang) {
 		String txt;
-		String langTxt;
+		int langID;
+		int highlightID;
 		
 		if (lang.equals("en")) {
 			SetDefaultCommands (R.string.defaultcommands,
@@ -902,32 +905,43 @@ public class GameActivity extends FragmentActivity implements DialogInterface.On
 								R.string.defaultcommands_1,
 								R.string.defaultcommands_2,
 								R.string.defaultcommands_10);
-			langTxt=getString(R.string.storylang_en);
+			highlightID=R.array.initial_highlights;
+			langID=R.string.storylang_en;
 		} else if (lang.equals("de")) { 
 			SetDefaultCommands (R.string.defaultcommands_de,
 								R.string.defaultcommands_de_0,		
 								R.string.defaultcommands_de_1,
 								R.string.defaultcommands_de_2,
 								R.string.defaultcommands_de_10);		
-			langTxt=getString(R.string.storylang_de);
+			highlightID=R.array.initial_highlights_de;
+			langID=R.string.storylang_de;
+		} else if (lang.equals("es")) { 
+			SetDefaultCommands (R.string.defaultcommands_es,
+								R.string.emptycommands,		
+								R.string.emptycommands,
+								R.string.emptycommands,
+								R.string.emptycommands);		
+			highlightID=R.array.initial_highlights_es;
+			langID=R.string.storylang_es;
 		} else if (lang.equals("..")) { 
 			SetDefaultCommands (R.string.emptycommands,
 								R.string.emptycommands,		
 								R.string.emptycommands,
 								R.string.emptycommands,
 								R.string.emptycommands);		
-			langTxt=getString(R.string.storylang_de);
+			highlightID=R.array.initial_highlights;
+			langID=R.string.storylang_en;
 		}
 		else
 			return;
 		
 		inputFragment.UpdateCmdButtons(-2);
 
-		txt = getString(R.string.storylang_written, langTxt);
+		txt = getString(R.string.storylang_written, getString(langID));
 		Toast.makeText(this, txt, Toast.LENGTH_LONG).show();
 		
 		retainerFragment.highlighted.clear();
-		String[] ini = getResources().getStringArray(R.array.initial_highlights_de);
+		String[] ini = getResources().getStringArray(highlightID);
 		for (String i : ini) {
 			retainerFragment.highlighted.add(i);
 		}
@@ -992,6 +1006,7 @@ public class GameActivity extends FragmentActivity implements DialogInterface.On
 		// check for words, mostly used in only one of the following languages:
 		storyLanguageData.en += CountWords("the,a,i,you", txt);
 		storyLanguageData.de += CountWords("der,die,das,ein,eine,einer,ist", txt);
+		storyLanguageData.es += CountWords("la,los,las,una,el", txt);
 		// ... (other languages)
 
 		storyLanguage="en";
@@ -1001,7 +1016,12 @@ public class GameActivity extends FragmentActivity implements DialogInterface.On
 			storyLanguage="de";
 			maxCount=storyLanguageData.de;
 		}
+		if (storyLanguageData.es > maxCount) {
+			storyLanguage="es";
+			maxCount=storyLanguageData.es;
+		}
 		// ... (other languages)
+		
 		
 		// Only if we are sure about the language (and no other settings are already there)
 		// we'll write default settings
@@ -1030,13 +1050,14 @@ public class GameActivity extends FragmentActivity implements DialogInterface.On
 		tmp = storyLanguage  
 			    + "  c=" + storyLanguageData.count 
 				+ "  en=" + storyLanguageData.en 
-				+ "  de=" + storyLanguageData.de;
+				+ "  de=" + storyLanguageData.de 
+				+ "  es=" + storyLanguageData.es;
 		
 		//Toast.makeText(this, tmp, Toast.LENGTH_LONG).show();
 		
-		//ss = new SpannableString(tmp);retainerFragment.messageBuffer.add(new StoryItem(ss, StoryItem.MYSELF));
+		ss = new SpannableString(tmp);retainerFragment.messageBuffer.add(new StoryItem(ss, StoryItem.MYSELF));
 
-		ss = new SpannableString(txt + "\n" + tmp);retainerFragment.messageBuffer.add(new StoryItem(ss, StoryItem.MYSELF));
+		// ss = new SpannableString(txt + "\n" + tmp);retainerFragment.messageBuffer.add(new StoryItem(ss, StoryItem.MYSELF));
 		*/
 	}
 }
