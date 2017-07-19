@@ -2,6 +2,7 @@ package de.onyxbits.textfiction;
 
 import java.io.File;
 import java.io.PrintStream;
+import java.io.PrintWriter;
 import java.lang.reflect.Field;
 import java.util.Iterator;
 
@@ -141,6 +142,19 @@ public class GameActivity extends FragmentActivity implements DialogInterface.On
 	 */
 	private String[] highlighted;
 
+	/**
+	 * Language of the story
+	 */
+	private String storyLanguage;
+
+	class storyLanguageClass
+	{
+	    public int count; 
+	    public int de; 
+	    public int en;  
+	};
+	storyLanguageClass storyLanguageData;
+	
 	private SharedPreferences prefs;
 	private TextToSpeech speaker;
 	private boolean ttsReady;
@@ -150,6 +164,14 @@ public class GameActivity extends FragmentActivity implements DialogInterface.On
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+		
+		// by default first guess, story language is English
+		storyLanguage="en";
+		storyLanguageData = new storyLanguageClass ();
+		storyLanguageData.count = 0;
+		storyLanguageData.de = 0;
+		storyLanguageData.en = 0;
+
 		prefs = PreferenceManager.getDefaultSharedPreferences(this);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
@@ -343,7 +365,7 @@ public class GameActivity extends FragmentActivity implements DialogInterface.On
 				return true;
 			}
 			case R.id.mi_WriteStoryLanguageFiles: {
-				inputFragment.WriteStoryLangueSettings("de"); // ### BCM ### ToDo select language
+				WriteStoryLangueSettings(storyLanguage);
 				return true;
 			}
 			case R.id.mi_help: {
@@ -462,6 +484,8 @@ public class GameActivity extends FragmentActivity implements DialogInterface.On
 				tmp = tmp.substring(1); 		
 				CuttedLeft++;
 			}
+
+			AutoDetectLangue(tmp);
 			
 			if (ttsReady && prefs.getBoolean("narrator", false)) {
 				speaker.speak(tmp, TextToSpeech.QUEUE_FLUSH, null);
@@ -841,5 +865,197 @@ public class GameActivity extends FragmentActivity implements DialogInterface.On
 		} else {
 			super.openOptionsMenu();
 		}
+	}
+	
+	private void WriteSetting(int resId, String FileName) {
+		File StoryFile;
+		
+		StoryFile=FileUtil.getDataDir(storyFile);
+
+		try {
+			String buttonDef = getString(resId);		
+			JSONArray array = new JSONArray(buttonDef);
+			PrintWriter pw = new PrintWriter(new File(StoryFile, FileName));
+			pw.write(array.toString(2));
+			pw.close();
+		}
+		catch (Exception e) {
+			Log.w(getClass().getName(), e);
+		}
+	}
+
+	private void SetDefaultCommands(int c, int c0, int c1, int c2, int c10) {
+		WriteSetting(c,   "quickcommands.json");	
+		WriteSetting(c0,  "quickcommands_0.json");	
+		WriteSetting(c1,  "quickcommands_1.json");	
+		WriteSetting(c2,  "quickcommands_2.json");	
+		WriteSetting(c10, "quickcommands_10.json");	
+	}
+	
+	public void WriteStoryLangueSettings(String lang) {
+		String txt;
+		String langTxt;
+		
+		if (lang.equals("en")) {
+			SetDefaultCommands (R.string.defaultcommands,
+								R.string.defaultcommands_0,		
+								R.string.defaultcommands_1,
+								R.string.defaultcommands_2,
+								R.string.defaultcommands_10);
+			langTxt=getString(R.string.storylang_en);
+		} else if (lang.equals("de")) { 
+			SetDefaultCommands (R.string.defaultcommands_de,
+								R.string.defaultcommands_de_0,		
+								R.string.defaultcommands_de_1,
+								R.string.defaultcommands_de_2,
+								R.string.defaultcommands_de_10);		
+			langTxt=getString(R.string.storylang_de);
+		} else if (lang.equals("..")) { 
+			SetDefaultCommands (R.string.emptycommands,
+								R.string.emptycommands,		
+								R.string.emptycommands,
+								R.string.emptycommands,
+								R.string.emptycommands);		
+			langTxt=getString(R.string.storylang_de);
+		}
+		else
+			return;
+		
+		inputFragment.UpdateCmdButtons(-2);
+
+		txt = getString(R.string.storylang_written);
+		txt = txt.replaceFirst("LANG", langTxt);
+		Toast.makeText(this, txt, Toast.LENGTH_LONG).show();
+		
+		
+		
+		// Load the highlight file
+		try {
+			File file = new File(FileUtil.getDataDir(storyFile), HIGHLIGHTFILE);
+			JSONArray js = new JSONArray(FileUtil.getContents(file));
+			for (int i = 0; i < js.length(); i++) {
+				retainerFragment.highlighted.add(js.getString(i));
+			}
+		}
+		catch (Exception e) {
+			// No big deal. Probably the first time this game runs -> use defaults
+			String[] ini = getResources().getStringArray(R.array.initial_highlights);
+			for (String i : ini) {
+				retainerFragment.highlighted.add(i);
+			}
+		}
+		
+		retainerFragment.highlighted.clear();
+		String[] ini = getResources().getStringArray(R.array.initial_highlights_de);
+		for (String i : ini) {
+			retainerFragment.highlighted.add(i);
+		}
+		highlighted = retainerFragment.highlighted.toArray(new String[0]);
+		
+		try {
+			JSONArray array = new JSONArray(retainerFragment.highlighted);
+			File f = new File(FileUtil.getDataDir(storyFile), HIGHLIGHTFILE);
+			PrintStream ps = new PrintStream(f);
+			ps.write(array.toString(2).getBytes());
+			ps.close();
+		}
+		catch (Exception e) {
+			Log.w(getClass().getName(), e);
+		}
 	}	
+
+	private int CountWords(String words, String txt)  {
+		int count=0;
+		String word;
+		
+		int pos;
+
+		while (!words.equals(""))
+		{
+			pos = (words+",").indexOf(",", 0);
+			word = " " + words.substring(0, pos) + " ";
+			words = (words+" ").substring(pos+1).trim();
+		
+			pos = txt.indexOf(word, 0);
+			while (pos != -1) {
+				count++;
+				pos = txt.indexOf(word, pos+1);
+			}
+		}
+		
+		return count;
+	}
+	
+	private void AutoDetectLangue(String txt)  {
+		int maxCount;
+		String tmp;
+		
+		if (storyLanguageData.count > 4)
+			return; // enough detected
+		
+		storyLanguageData.count++;
+	
+		txt = " " + txt.toLowerCase() + " ";
+		txt = txt.replace(".", " ");
+		txt = txt.replace(",", " ");
+		txt = txt.replace("\"", " ");
+		txt = txt.replace("!", " ");
+		txt = txt.replace("?", " ");
+		txt = txt.replace("(", " ");
+		txt = txt.replace(")", " ");
+		txt = txt.replace("/", " ");
+		txt = txt.replace("-", " ");
+		txt = txt.replace("\r", " ");
+		txt = txt.replace("\n", " ");
+		
+		// check for words, mostly used in only one of the following languages:
+		storyLanguageData.en += CountWords("the,a,i,you", txt);
+		storyLanguageData.de += CountWords("der,die,das,ein,eine,einer,ist", txt);
+		// ... (other languages)
+
+		storyLanguage="en";
+		maxCount=storyLanguageData.en;
+		
+		if (storyLanguageData.de > maxCount) {
+			storyLanguage="de";
+			maxCount=storyLanguageData.de;
+		}
+		// ... (other languages)
+		
+		// Only if we are sure about the language (and no other settings are already there)
+		// we'll write default settings
+		
+		// When there are a lot of languages, it will be a lot of more work.
+		// Because it will happen (more often) that the same words are in different languages.
+		
+		if (maxCount > 5) {
+			
+			File StoryDir;
+			StoryDir=new File (FileUtil.getDataDir(storyFile), "");
+			File[] files = StoryDir.listFiles();
+
+			if (files != null) {
+				if (files.length == 0) {
+					// 	Empty directory, so we write default language settings
+					WriteStoryLangueSettings(storyLanguage);
+				}
+			}
+		}
+		
+		// ### BCM - Debug ###
+		/*
+		SpannableString ss;
+		
+		tmp = storyLanguage  
+			    + "  c=" + storyLanguageData.count 
+				+ "  en=" + storyLanguageData.en 
+				+ "  de=" + storyLanguageData.de;
+		
+		//Toast.makeText(this, tmp, Toast.LENGTH_LONG).show();
+		
+		//ss = new SpannableString(tmp);retainerFragment.messageBuffer.add(new StoryItem(ss, StoryItem.MYSELF));
+
+		ss = new SpannableString(txt + "\n" + tmp);retainerFragment.messageBuffer.add(new StoryItem(ss, StoryItem.MYSELF));
+		*/
+	}
 }
