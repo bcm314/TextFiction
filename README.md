@@ -33,3 +33,7 @@ Changes:
 - changed design
 . moved bubbles (but done for all themes) closer to the border
 . Jason and Atalanta: move "right_bubble" to left side
+
+ToDo:
+- decide for default command buttons
+- need fixed: GridView (id/list) rows overlapping - make row height fit the tallest item
