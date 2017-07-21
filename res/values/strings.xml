@@ -66,5 +66,10 @@
 	<string name="title_edit_direction">Edit direction</string>
 	<string name="err_sr_deprecated">Games can only be saved/restored from the menu!</string>
 	<string name="msg_file_copied_you_may_delete_the_original_now">File copied. You may delete the original now.</string>
-
+	<string name="mi_WriteStoryLanguageFiles">Use story-language</string>
+	<string name="storylang_written">Use %1$s story-settings.</string>
+	<string name="storylang_en">English</string>
+	<string name="storylang_de">German</string>
+	<string name="storylang_es">Spain</string>
+						
 </resources>

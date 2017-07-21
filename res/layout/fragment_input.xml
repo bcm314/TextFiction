@@ -12,8 +12,10 @@
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_below="@+id/userinput"
-			android:layout_toLeftOf="@+id/submit"
-			android:layout_toRightOf="@+id/expand" >
+			android:layout_alignRight="@+id/submit"
+			android:layout_alignLeft="@+id/expand"
+			android:paddingLeft="2dp"
+			android:paddingRight="2dp" >
 
 			<HorizontalScrollView
 				android:id="@+id/horizontalScrollView1"
