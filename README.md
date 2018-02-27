@@ -33,6 +33,7 @@ Changes:
 - changed design
 . moved bubbles (but done for all themes) closer to the border
 . Jason and Atalanta: move "right_bubble" to left side
+- Removed "atonce" (use "$" at end of cmd instead)
 
 ToDo:
 - decide for default command buttons
