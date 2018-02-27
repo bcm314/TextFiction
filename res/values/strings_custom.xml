@@ -71,63 +71,51 @@
 	<string name="defaultcommands">[
   {
     "imgid": 42,
-    "cmd": "Go",
-    "atonce": false
+    "cmd": "Go"
   },
   {
     "imgid": 0,
-    "cmd": "Look",
-    "atonce": false
+    "cmd": "Look"
   },
   {
     "imgid": 8,
-    "cmd": "Get",
-    "atonce": false
+    "cmd": "Get"
   },
   {
     "imgid": 5,
-    "cmd": "Open",
-    "atonce": false
+    "cmd": "Open"
   },
   {
     "imgid": 6,
-    "cmd": "Close",
-    "atonce": false
+    "cmd": "Close"
   },
   {
     "imgid": 7,
-    "cmd": "Inventory",
-    "atonce": true
+    "cmd": "Inventory$"
   },
   {
     "imgid": 15,
-    "cmd": "Pull",
-    "atonce": false
+    "cmd": "Pull"
   },
   {
     "imgid": 14,
-    "cmd": "Push",
-    "atonce": false
+    "cmd": "Push"
   },
   {
     "imgid": 2,
-    "cmd": "Read",
-    "atonce": false
+    "cmd": "Read"
   },
   {
     "imgid": 24,
-    "cmd": "Drop",
-    "atonce": false
+    "cmd": "Drop"
   },
   {
     "imgid": 22,
-    "cmd": "Give",
-    "atonce": false
+    "cmd": "Give"
   },
   {
     "imgid": 11,
-    "cmd": "Wait",
-    "atonce": true
+    "cmd": "Wait"
   }
   
 ]</string>
@@ -135,63 +123,51 @@
 	<string name="defaultcommands_0">[
   {
     "imgid": 32,
-    "cmd": "north",
-    "atonce": true
+    "cmd": "north$"
   },
   {
     "imgid": 33,
-    "cmd": "south",
-    "atonce": true
+    "cmd": "south$"
   },
   {
     "imgid": 34,
-    "cmd": "west",
-    "atonce": true
+    "cmd": "west$"
   },
   {
     "imgid": 35,
-    "cmd": "east",
-    "atonce": true
+    "cmd": "east$"
   },
   {
     "imgid": 36,
-    "cmd": "northwest",
-    "atonce": true
+    "cmd": "northwest$"
   },
   {
     "imgid": 37,
-    "cmd": "northeast",
-    "atonce": true
+    "cmd": "northeast$"
   },
   {
     "imgid": 38,
-    "cmd": "southwest",
-    "atonce": true
+    "cmd": "southwest$"
   },
   {
     "imgid": 39,
-    "cmd": "southeast",
-    "atonce": true
+    "cmd": "southeast$"
   },
   {
     "imgid": 40,
-    "cmd": "up",
-    "atonce": true
+    "cmd": "up$"
   },
   {
     "imgid": 41,
-    "cmd": "down",
-    "atonce": true
+    "cmd": "down$"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   }
 
 ]</string>		
@@ -199,63 +175,51 @@
 	<string name="defaultcommands_1">[
   {
     "imgid": 0,
-    "cmd": \"\",
-    "atonce": true
+    "cmd": \"$\"
   },
   {
     "imgid": 1,
-    "cmd": \"^Examine\",
-    "atonce": false
+    "cmd": \"^Examine\"
   },
  {
     "imgid": 40,
-    "cmd": \"at\",
-    "atonce": false
+    "cmd": \"at\"
   },
   {
     "imgid": 41,
-    "cmd": \"under\",
-    "atonce": false
+    "cmd": \"under\"
   },
   {
     "imgid": 14,
-    "cmd": \"in\",
-    "atonce": false
+    "cmd": \"in\"
   },
   {
     "imgid": 15,
-    "cmd": \"out\",
-    "atonce": false
+    "cmd": \"out\"
   },
   {
     "imgid": 23,
-    "cmd": \"through\",
-    "atonce": false
+    "cmd": \"through\"
   },
   {
     "imgid": 32,
-    "cmd": \"north\",
-    "atonce": true
+    "cmd": \"north$\"
   },
   {
     "imgid": 33,
-    "cmd": \"south\",
-    "atonce": true
+    "cmd": \"south$\"
   },
   {
     "imgid": 34,
-    "cmd": \"west\",
-    "atonce": true
+    "cmd": \"west$\"
   },
   {
     "imgid": 35,
-    "cmd": \"east\",
-    "atonce": true
+    "cmd": \"east$\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   }
 
 ]</string>		
@@ -263,63 +227,51 @@
 		<string name="defaultcommands_2">[
   {
     "imgid": 10,
-    "cmd": \"all\",
-    "atonce": true
+    "cmd": \"all$\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   }
 
 ]</string>		
@@ -327,63 +279,51 @@
 		<string name="defaultcommands_10">[
   {
     "imgid": 10,
-    "cmd": \"all\",
-    "atonce": false
+    "cmd": \"all\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   }
 
 ]</string>		
@@ -391,63 +331,51 @@
 	<string name="defaultcommands_de">[
   {
     "imgid": 42,
-    "cmd": "Geh",
-    "atonce": false
+    "cmd": "Geh"
   },
   {
     "imgid": 0,
-    "cmd": "Schau",
-    "atonce": false
+    "cmd": "Schau"
   },
   {
     "imgid": 8,
-    "cmd": "Nimm",
-    "atonce": false
+    "cmd": "Nimm"
   },
   {
     "imgid": 5,
-    "cmd": "Öffne",
-    "atonce": false
+    "cmd": "Öffne"
   },
   {
     "imgid": 6,
-    "cmd": "Schließe",
-    "atonce": false
+    "cmd": "Schließe"
   },
   {
     "imgid": 7,
-    "cmd": "Inventar",
-    "atonce": true
+    "cmd": "Inventar$"
   },
   {
     "imgid": 15,
-    "cmd": "Zieh",
-    "atonce": false
+    "cmd": "Zieh"
   },
   {
     "imgid": 14,
-    "cmd": "Schieb",
-    "atonce": false
+    "cmd": "Schieb"
   },
   {
     "imgid": 2,
-    "cmd": "Lies",
-    "atonce": false
+    "cmd": "Lies"
   },
   {
     "imgid": 24,
-    "cmd": "Leg",
-    "atonce": false
+    "cmd": "Leg"
   },
   {
     "imgid": 22,
-    "cmd": "Gebe",
-    "atonce": false
+    "cmd": "Gebe"
   },
   {
     "imgid": 11,
-    "cmd": "Warte",
-    "atonce": false
+    "cmd": "Warte"
   }
   
 ]</string>
@@ -455,127 +383,103 @@
 	<string name="defaultcommands_de_0">[
   {
     "imgid": 32,
-    "cmd": \"nach Norden.\",
-    "atonce": true
+    "cmd": \"nach Norden.$\"
   },
   {
     "imgid": 33,
-    "cmd": \"nach Süden.\",
-    "atonce": true
+    "cmd": \"nach Süden.$\"
   },
   {
     "imgid": 34,
-    "cmd": \"nach Westen.\",
-    "atonce": true
+    "cmd": \"nach Westen.$\"
   },
   {
     "imgid": 35,
-    "cmd": \"nach Osten.\",
-    "atonce": true
+    "cmd": \"nach Osten.$\"
   },
   {
     "imgid": 36,
-    "cmd": \"nach Nordwesten.\",
-    "atonce": true
+    "cmd": \"nach Nordwesten.$\"
   },
   {
     "imgid": 37,
-    "cmd": \"nach Nordosten.\",
-    "atonce": true
+    "cmd": \"nach Nordosten.$\"
   },
   {
     "imgid": 38,
-    "cmd": \"nach Südwesten.\",
-    "atonce": true
+    "cmd": \"nach Südwesten.$\"
   },
   {
     "imgid": 39,
-    "cmd": \"nach Südosten.\",
-    "atonce": true
+    "cmd": \"nach Südosten.$\"
   },
   {
     "imgid": 40,
-    "cmd": \"nach oben.\",
-    "atonce": true
+    "cmd": \"nach oben.$\"
   },
   {
     "imgid": 41,
-    "cmd": \"nach unten.\",
-    "atonce": true
+    "cmd": \"nach unten.$\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   }
-
+  
 ]</string>		
 	
 	<string name="defaultcommands_de_1">[
   {
     "imgid": 0,
-    "cmd": \"\",
-    "atonce": true
+    "cmd": \"$\"
   },
  {
     "imgid": 1,
-    "cmd": "^Untersuch",
-    "atonce": false
+    "cmd": "^Untersuch"
   },
  {
     "imgid": 40,
-    "cmd": "auf",
-    "atonce": false
+    "cmd": "auf"
   },
   {
     "imgid": 41,
-    "cmd": "unter",
-    "atonce": false
+    "cmd": "unter"
   },
   {
     "imgid": 14,
-    "cmd": "in",
-    "atonce": false
+    "cmd": "in"
   },
   {
     "imgid": 15,
-    "cmd": "aus",
-    "atonce": false
+    "cmd": "aus"
   },
   {
     "imgid": 23,
-    "cmd": "durch",
-    "atonce": false
+    "cmd": "durch"
   },
   {
     "imgid": 32,
-    "cmd": \"nach Norden.\",
-    "atonce": true
+    "cmd": \"nach Norden.$\"
   },
   {
     "imgid": 33,
-    "cmd": \"nach Süden.\",
-    "atonce": true
+    "cmd": \"nach Süden.$\"
   },
   {
     "imgid": 34,
-    "cmd": \"nach Westen.\",
-    "atonce": true
+    "cmd": \"nach Westen.$\"
   },
   {
     "imgid": 35,
-    "cmd": \"nach Osten.\",
-    "atonce": true
+    "cmd": \"nach Osten.$\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   }
 
 ]</string>		
@@ -583,63 +487,51 @@
 		<string name="defaultcommands_de_2">[
   {
     "imgid": 10,
-    "cmd": \"alles\",
-    "atonce": true
+    "cmd": \"alles$\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   }
 
 ]</string>		
@@ -647,63 +539,51 @@
 		<string name="defaultcommands_de_10">[
   {
     "imgid": 10,
-    "cmd": \"alles\",
-    "atonce": false
+    "cmd": \"alles\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   }
 
 ]</string>		
@@ -711,63 +591,51 @@
 	<string name="defaultcommands_es">[
   {
     "imgid": 0,
-    "cmd": "Mirar",
-    "atonce": true
+    "cmd": "Mirar$"
   },
   {
     "imgid": 1,
-    "cmd": "Examinar",
-    "atonce": false
+    "cmd": "Examinar"
   },
   {
     "imgid": 8,
-    "cmd": "Tomar",
-    "atonce": false
+    "cmd": "Tomar"
   },
   {
     "imgid": 5,
-    "cmd": "Abrir",
-    "atonce": false
+    "cmd": "Abrir"
   },
   {
     "imgid": 6,
-    "cmd": "Cerrar",
-    "atonce": false
+    "cmd": "Cerrar"
   },
   {
     "imgid": 7,
-    "cmd": "Inventario",
-    "atonce": true
+    "cmd": "Inventario$"
   },
     {
     "imgid": 15,
-    "cmd": "Tirar",
-    "atonce": false
+    "cmd": "Tirar"
   },
     {
     "imgid": 14,
-    "cmd": "Empujar",
-    "atonce": false
+    "cmd": "Empujar"
   },
   {
     "imgid": 2,
-    "cmd": "Leer",
-    "atonce": false
+    "cmd": "Leer"
   },
   {
     "imgid": 24,
-    "cmd": "Dejar",
-    "atonce": false
+    "cmd": "Dejar"
   },
   {
     "imgid": 22,
-    "cmd": "Dar",
-    "atonce": false
+    "cmd": "Dar"
   },
     {
     "imgid": 11,
-    "cmd": "Esperar",
-    "atonce": true
+    "cmd": "Esperar$"
   }
 
 ]</string>
@@ -775,63 +643,51 @@
 		<string name="emptycommands">[
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   },
   {
     "imgid": 43,
-    "cmd": \"\",
-    "atonce": false
+    "cmd": \"\"
   }
 
 ]</string>		
