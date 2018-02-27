@@ -89,9 +89,15 @@ public class CmdIcon {
 	public static JSONObject toJSON(CmdIcon ico) {
 		JSONObject ret = new JSONObject();
 		try {
+			String cmd;
+				
 			ret.put("imgid", ico.imgid);
-			ret.put("cmd", ico.cmd);
-			ret.put("atonce", ico.atOnce);
+
+			cmd=ico.cmd;
+			if ((ico.atOnce) && (cmd==cmd.replace("$", "")))
+				cmd=cmd + "$";
+			ret.put("cmd", cmd);
+			//BCM ret.put("atonce", ico.atOnce);
 		}
 		catch (JSONException e) {
 			// Can't really see this happening
