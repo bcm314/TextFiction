@@ -32,7 +32,7 @@ import android.widget.Toast;
 class CommandChanger implements OnItemClickListener, OnLongClickListener {
 
 	private CmdIcon cmdIcon;
-	private CheckBox atOnce;
+	// BCM private CheckBox atOnce;
 	private String text;
 	private AlertDialog dialog;
 	private TextView cmdLine;
@@ -49,7 +49,7 @@ class CommandChanger implements OnItemClickListener, OnLongClickListener {
 	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int position,
 			long id) {
-		cmdIcon.atOnce = atOnce.isChecked();
+		// BCM cmdIcon.atOnce = atOnce.isChecked();
 		cmdIcon.cmd = text;
 		cmdIcon.imgid = ((Integer)view.getTag()).intValue();
 		target.setImageResource(CmdIcon.ICONS[position]);
@@ -82,12 +82,12 @@ class CommandChanger implements OnItemClickListener, OnLongClickListener {
 			cmdIcon = (CmdIcon) v.getTag();
 			View layout = li.inflate(R.layout.quickcmdsettings, null);
 			GridView gridView = (GridView) layout.findViewById(R.id.iconselect);
-			atOnce = (CheckBox) layout.findViewById(R.id.executeatonce);
+			// BCM atOnce = (CheckBox) layout.findViewById(R.id.executeatonce);
 			gridView.setAdapter(new IconAdapter(ctx));
 			TextView txt = (TextView) layout.findViewById(R.id.replacementcmd);
 			txt.setText("'" + text.trim() + "'");
 			gridView.setOnItemClickListener(this);
-			atOnce.setChecked(cmdIcon.atOnce);
+			// BCM atOnce.setChecked(cmdIcon.atOnce);
 			target = (ImageView) v;
 			AlertDialog.Builder builder = new AlertDialog.Builder(ctx);
 			dialog = builder.setTitle(R.string.title_change_commmand).setView(layout)
