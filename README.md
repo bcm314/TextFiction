@@ -34,6 +34,7 @@ Changes:
 . moved bubbles (but done for all themes) closer to the border
 . Jason and Atalanta: move "right_bubble" to left side
 - Removed "atonce" (use "$" at end of cmd instead)
+- Use icon-String-ID instead int-ID, so the sorting can be easily changed.
 
 ToDo:
 - decide for default command buttons
