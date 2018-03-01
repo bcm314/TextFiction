@@ -37,5 +37,6 @@ Changes:
 - Use icon-String-ID instead int-ID, so the sorting can be easily changed.
 
 ToDo:
-- decide for default command buttons
+- decide for default command buttons (commands to use)
+- edit commands: decide which buttons to show (add more), change sorting, fix string-names of buttons
 - need fixed: GridView (id/list) rows overlapping - make row height fit the tallest item
