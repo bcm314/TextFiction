@@ -70,51 +70,51 @@
 
 	<string name="defaultcommands">[
   {
-    "imgid": 42,
+    "imgid": "GO",
     "cmd": "Go"
   },
   {
-    "imgid": 0,
+    "imgid": "EYE",
     "cmd": "Look"
   },
   {
-    "imgid": 8,
+    "imgid": "UPLOAD",
     "cmd": "Get"
   },
   {
-    "imgid": 5,
+    "imgid": "UNLOCK",
     "cmd": "Open"
   },
   {
-    "imgid": 6,
+    "imgid": "LOCK",
     "cmd": "Close"
   },
   {
-    "imgid": 7,
+    "imgid": ""BRIEFCASE",
     "cmd": "Inventory$"
   },
   {
-    "imgid": 15,
+    "imgid": "MAXIMIZE",
     "cmd": "Pull"
   },
   {
-    "imgid": 14,
+    "imgid": "MINIMIZE",
     "cmd": "Push"
   },
   {
-    "imgid": 2,
+    "imgid": "NEWS",
     "cmd": "Read"
   },
   {
-    "imgid": 24,
+    "imgid": "TRASH",
     "cmd": "Drop"
   },
   {
-    "imgid": 22,
+    "imgid": "GIFT",
     "cmd": "Give"
   },
   {
-    "imgid": 11,
+    "imgid": "WATCH",
     "cmd": "Wait"
   }
   
@@ -122,51 +122,51 @@
 
 	<string name="defaultcommands_0">[
   {
-    "imgid": 32,
+    "imgid": "UP",
     "cmd": "north$"
   },
   {
-    "imgid": 33,
+    "imgid": "DOWN",
     "cmd": "south$"
   },
   {
-    "imgid": 34,
+    "imgid": "LEFT",
     "cmd": "west$"
   },
   {
-    "imgid": 35,
+    "imgid": "RIGHT",
     "cmd": "east$"
   },
   {
-    "imgid": 36,
+    "imgid": "UPLEFT",
     "cmd": "northwest$"
   },
   {
-    "imgid": 37,
+    "imgid": "UPRIGHT",
     "cmd": "northeast$"
   },
   {
-    "imgid": 38,
+    "imgid": "DOWNLEFT",
     "cmd": "southwest$"
   },
   {
-    "imgid": 39,
+    "imgid": "DOWNRIGHT",
     "cmd": "southeast$"
   },
   {
-    "imgid": 40,
+    "imgid": "HIGHER",
     "cmd": "up$"
   },
   {
-    "imgid": 41,
+    "imgid": "LOWER",
     "cmd": "down$"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   }
 
@@ -174,51 +174,51 @@
 	
 	<string name="defaultcommands_1">[
   {
-    "imgid": 0,
+    "imgid": "EYE",
     "cmd": \"$\"
   },
   {
-    "imgid": 1,
+    "imgid": "LENS",
     "cmd": \"^Examine\"
   },
  {
-    "imgid": 40,
+    "imgid": "HIGHER",
     "cmd": \"at\"
   },
   {
-    "imgid": 41,
+    "imgid": "LOWER",
     "cmd": \"under\"
   },
   {
-    "imgid": 14,
+    "imgid": "MINIMIZE",
     "cmd": \"in\"
   },
   {
-    "imgid": 15,
+    "imgid": "MAXIMIZE",
     "cmd": \"out\"
   },
   {
-    "imgid": 23,
+    "imgid": "EJECT",
     "cmd": \"through\"
   },
   {
-    "imgid": 32,
+    "imgid": "UP",
     "cmd": \"north$\"
   },
   {
-    "imgid": 33,
+    "imgid": "DOWN",
     "cmd": \"south$\"
   },
   {
-    "imgid": 34,
+    "imgid": "LEFT",
     "cmd": \"west$\"
   },
   {
-    "imgid": 35,
+    "imgid": "RIGHT",
     "cmd": \"east$\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   }
 
@@ -226,51 +226,51 @@
 
 		<string name="defaultcommands_2">[
   {
-    "imgid": 10,
+    "imgid": "SHOPPING",
     "cmd": \"all$\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   }
 
@@ -278,51 +278,51 @@
 
 		<string name="defaultcommands_10">[
   {
-    "imgid": 10,
+    "imgid": "SHOPPING",
     "cmd": \"all\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   }
 
@@ -330,51 +330,51 @@
 						
 	<string name="defaultcommands_de">[
   {
-    "imgid": 42,
+    "imgid": "GO",
     "cmd": "Geh"
   },
   {
-    "imgid": 0,
+    "imgid": "EYE",
     "cmd": "Schau"
   },
   {
-    "imgid": 8,
+    "imgid": "UPLOAD",
     "cmd": "Nimm"
   },
   {
-    "imgid": 5,
+    "imgid": "UNLOCK",
     "cmd": "Öffne"
   },
   {
-    "imgid": 6,
+    "imgid": "LOCK",
     "cmd": "Schließe"
   },
   {
-    "imgid": 7,
+    "imgid": "BRIEFCASE",
     "cmd": "Inventar$"
   },
   {
-    "imgid": 15,
+    "imgid": "MAXIMIZE",
     "cmd": "Zieh"
   },
   {
-    "imgid": 14,
+    "imgid": "MINIMIZE",
     "cmd": "Schieb"
   },
   {
-    "imgid": 2,
+    "imgid": "NEWS",
     "cmd": "Lies"
   },
   {
-    "imgid": 24,
+    "imgid": "TRASH",
     "cmd": "Leg"
   },
   {
-    "imgid": 22,
+    "imgid": "GIFT",
     "cmd": "Gebe"
   },
   {
-    "imgid": 11,
+    "imgid": "WATCH",
     "cmd": "Warte"
   }
   
@@ -382,51 +382,51 @@
 
 	<string name="defaultcommands_de_0">[
   {
-    "imgid": 32,
+    "imgid": "UP",
     "cmd": \"nach Norden.$\"
   },
   {
-    "imgid": 33,
+    "imgid": "DOWN",
     "cmd": \"nach Süden.$\"
   },
   {
-    "imgid": 34,
+    "imgid": "LEFT",
     "cmd": \"nach Westen.$\"
   },
   {
-    "imgid": 35,
+    "imgid": "RIGHT",
     "cmd": \"nach Osten.$\"
   },
   {
-    "imgid": 36,
+    "imgid": "UPLEFT",
     "cmd": \"nach Nordwesten.$\"
   },
   {
-    "imgid": 37,
+    "imgid": "UPRIGHT",
     "cmd": \"nach Nordosten.$\"
   },
   {
-    "imgid": 38,
+    "imgid": "DOWNLEFT",
     "cmd": \"nach Südwesten.$\"
   },
   {
-    "imgid": 39,
+    "imgid": "DOWNRIGHT",
     "cmd": \"nach Südosten.$\"
   },
   {
-    "imgid": 40,
+    "imgid": "HIGHER",
     "cmd": \"nach oben.$\"
   },
   {
-    "imgid": 41,
+    "imgid": "LOWER",
     "cmd": \"nach unten.$\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   }
   
@@ -434,51 +434,51 @@
 	
 	<string name="defaultcommands_de_1">[
   {
-    "imgid": 0,
+    "imgid": "EYE",
     "cmd": \"$\"
   },
  {
-    "imgid": 1,
+    "imgid": "LENS",
     "cmd": "^Untersuch"
   },
  {
-    "imgid": 40,
+    "imgid": "HIGHER",
     "cmd": "auf"
   },
   {
-    "imgid": 41,
+    "imgid":"LOWER",
     "cmd": "unter"
   },
   {
-    "imgid": 14,
+    "imgid": "MINIMIZE",
     "cmd": "in"
   },
   {
-    "imgid": 15,
+    "imgid": "MAXIMIZE",
     "cmd": "aus"
   },
   {
-    "imgid": 23,
+    "imgid": "EJECT",
     "cmd": "durch"
   },
   {
-    "imgid": 32,
+    "imgid": "UP",
     "cmd": \"nach Norden.$\"
   },
   {
-    "imgid": 33,
+    "imgid": "DOWN",
     "cmd": \"nach Süden.$\"
   },
   {
-    "imgid": 34,
+    "imgid": "LEFT",
     "cmd": \"nach Westen.$\"
   },
   {
-    "imgid": 35,
+    "imgid": "RIGHT",
     "cmd": \"nach Osten.$\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   }
 
@@ -486,51 +486,51 @@
 
 		<string name="defaultcommands_de_2">[
   {
-    "imgid": 10,
+    "imgid": "SHOPPING",
     "cmd": \"alles$\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   }
 
@@ -538,51 +538,51 @@
 
 		<string name="defaultcommands_de_10">[
   {
-    "imgid": 10,
+    "imgid": "SHOPPING",
     "cmd": \"alles\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   }
 
@@ -590,51 +590,51 @@
 				
 	<string name="defaultcommands_es">[
   {
-    "imgid": 0,
+    "imgid": "GO",
     "cmd": "Mirar$"
   },
   {
-    "imgid": 1,
+    "imgid": "EYE",
     "cmd": "Examinar"
   },
   {
-    "imgid": 8,
+    "imgid": "UPLOAD",
     "cmd": "Tomar"
   },
   {
-    "imgid": 5,
+    "imgid": "UNLOCK",
     "cmd": "Abrir"
   },
   {
-    "imgid": 6,
+    "imgid": "LOCK",
     "cmd": "Cerrar"
   },
   {
-    "imgid": 7,
+    "imgid": "BRIEFCASE",
     "cmd": "Inventario$"
   },
     {
-    "imgid": 15,
+    "imgid": "MAXIMIZE",
     "cmd": "Tirar"
   },
     {
-    "imgid": 14,
+    "imgid": "MINIMIZE",
     "cmd": "Empujar"
   },
   {
-    "imgid": 2,
+    "imgid": "NEWS",
     "cmd": "Leer"
   },
   {
-    "imgid": 24,
+    "imgid": TRASH,
     "cmd": "Dejar"
   },
   {
-    "imgid": 22,
+    "imgid": "GIFT",
     "cmd": "Dar"
   },
     {
-    "imgid": 11,
+    "imgid": "WATCH",
     "cmd": "Esperar$"
   }
 
@@ -642,51 +642,51 @@
 		
 		<string name="emptycommands">[
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   },
   {
-    "imgid": 43,
+    "imgid": "DOT",
     "cmd": \"\"
   }
 
